@@ -6,4 +6,8 @@
  *
  * @description Simplest demo module
  */
-angular.module('dgeniDemo', []);
+
+/**
+ * Simple test comment
+ */
+angular.module('dgeniDemo', ['dgeniDemo.directive1', 'dgeniDemo.directive2']);
