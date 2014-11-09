@@ -7,6 +7,9 @@ module.exports = new Package('dgeni-demo', [
   require('dgeni-packages/examples')
 ])
 
+.factory(require('./deployments/debug'))
+.factory(require('.deployments/default'))
+
 .config(function(dgeni, log, readFilesProcessor, writeFilesProcessor) {
 
   dgeni.stopOnValidationError = true;
@@ -38,5 +41,12 @@ module.exports = new Package('dgeni-demo', [
     '${ doc.id }.template.html',
     '${ doc.docType }.template.html',
     'common.template.html'
+  ];
+})
+
+.config(function(generateExamplesProcessor, debugDeployment, defaultDeployment) {
+  generateExamplesProcessor.deployments = [
+    debugDeployment,
+    defaultDeployment
   ];
 });
