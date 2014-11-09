@@ -1,0 +1,30 @@
+{
+  "name": "poc-dgeni-documentation",
+  "version": "0.0.1",
+  "description": "A basic set up for dgeni documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m0t0r/poc-dgeni-documentation.git"
+  },
+  "keywords": [
+    "dgeni",
+    "test",
+    "app"
+  ],
+  "author": "Vitaly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m0t0r/poc-dgeni-documentation/issues"
+  },
+  "homepage": "https://github.com/m0t0r/poc-dgeni-documentation",
+  "devDependencies": {
+    "canonical-path": "0.0.2",
+    "dgeni": "^0.4.1",
+    "dgeni-packages": "^0.10.5",
+    "gulp": "^3.8.10"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "poc-dgeni-documentation",
+  "version": "0.0.1",
+  "homepage": "https://github.com/m0t0r/poc-dgeni-documentation",
+  "authors": [
+    "Vitaly <motor.kodlife@gmail.com>"
+  ],
+  "description": "A basic set up for dgeni documentation",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "dgeni",
+    "test.",
+    "app"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.2"
+  }
+}
