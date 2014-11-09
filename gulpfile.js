@@ -16,3 +16,5 @@ gulp.task('dgeni', ['jshint'], function() {
     process.exit(1);
   });
 });
+
+gulp.task('default', ['dgeni']);
