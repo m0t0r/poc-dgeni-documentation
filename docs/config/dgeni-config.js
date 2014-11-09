@@ -1,4 +1,4 @@
-var path = require('cannonical-path');
+var path = require('canonical-path');
 
 var Package = require('dgeni').Package;
 
@@ -8,7 +8,7 @@ module.exports = new Package('dgeni-demo', [
 ])
 
 .factory(require('./deployments/debug'))
-.factory(require('.deployments/default'))
+.factory(require('./deployments/default'))
 
 .config(function(dgeni, log, readFilesProcessor, writeFilesProcessor) {
 
@@ -44,9 +44,16 @@ module.exports = new Package('dgeni-demo', [
   ];
 })
 
-.config(function(generateExamplesProcessor, debugDeployment, defaultDeployment) {
+.config(function(generateExamplesProcessor, generateProtractorTestsProcessor, debugDeployment, defaultDeployment) {
   generateExamplesProcessor.deployments = [
     debugDeployment,
     defaultDeployment
   ];
+
+  generateProtractorTestsProcessor.deployments = [
+    debugDeployment,
+    defaultDeployment
+  ];
+
+  generateProtractorTestsProcessor.basePath = 'build/docs';
 });

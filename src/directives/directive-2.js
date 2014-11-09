@@ -9,8 +9,10 @@
 angular
   .module('dgeniDemo.directive2', [])
   .directive('directive2', function() {
+    'use strict';
+
     return {
       replace: true,
       template: '<h3>Hi!, I am directive 2</h3>'
-    }
+    };
   });
