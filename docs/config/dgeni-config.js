@@ -17,7 +17,7 @@ module.exports = new Package('dgeni-demo', [
 
   log.level = 'info';
 
-  readFilesProcessor.basePath = path.resolve(__dirname, '..');
+  readFilesProcessor.basePath = path.resolve(__dirname, '../../');
   readFilesProcessor.sourceFiles = [
     {include: 'src/**/*.js', basePath: 'src'},
     {include: 'docs/content/**/*.ngdoc', basePath: 'docs/content'}
