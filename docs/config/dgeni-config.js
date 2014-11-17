@@ -6,8 +6,8 @@ module.exports = new Package('dgeni-demo', [
   require('dgeni-packages/ngdoc')
 ])
 
-.factory(require('./deployments/debug'))
 .factory(require('./deployments/default'))
+.processor(require('./processors/index-page'))
 
 .config(function(dgeni, log, readFilesProcessor, writeFilesProcessor) {
 
@@ -40,5 +40,42 @@ module.exports = new Package('dgeni-demo', [
     '${ doc.id }.template.html',
     '${ doc.docType }.template.html',
     'common.template.html'
+  ];
+})
+
+.config(function(computePathsProcessor, computeIdsProcessor) {
+  computePathsProcessor.pathTemplates.push({
+    docTypes: ['overview'],
+    getPath: function(doc) {
+      var docPath = path.dirname(doc.fileInfo.relativePath);
+      return docPath;
+    },
+    outputPathTemplate: 'partials/${path}.html'
+  });
+
+  computePathsProcessor.pathTemplates.push({
+    docTypes: ['indexPage'],
+    pathTemplate: '.',
+    outputPathTemplate: '${id}.html'
+  });
+
+  computePathsProcessor.pathTemplates.push({
+    docTypes: ['module'],
+    pathTemplate: '${area}/${name}',
+    outputPathTemplate: 'partials/${area}/${name}.html'
+  });
+
+  computeIdsProcessor.idTemplates.push({
+    docTypes: ['overview', 'indexPage'],
+    getId: function(doc) { return doc.fileInfo.baseName; },
+    getAliases: function(doc) { return [doc.id]; }
+  });
+
+})
+
+.config(function(generateIndexPagesProcessor, defaultDeployment) {
+
+  generateIndexPagesProcessor.deployments = [
+    defaultDeployment
   ];
 });

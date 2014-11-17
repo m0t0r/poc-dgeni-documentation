@@ -1,8 +1,6 @@
-/**
-* @ngdoc overview
-* @name API Reference
-* @description
-*/
+@ngdoc overview
+@name API Reference
+@description
 
-# AngularJS API Docs
-Welcome to the AngularJS API docs page
+# Dgeni Demo API Docs
+Welcome to the Dgeni Demo API docs page!
