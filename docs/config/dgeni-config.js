@@ -3,8 +3,7 @@ var path = require('canonical-path');
 var Package = require('dgeni').Package;
 
 module.exports = new Package('dgeni-demo', [
-  require('dgeni-packages/ngdoc'),
-  require('dgeni-packages/examples')
+  require('dgeni-packages/ngdoc')
 ])
 
 .factory(require('./deployments/debug'))
@@ -42,18 +41,4 @@ module.exports = new Package('dgeni-demo', [
     '${ doc.docType }.template.html',
     'common.template.html'
   ];
-})
-
-.config(function(generateExamplesProcessor, generateProtractorTestsProcessor, debugDeployment, defaultDeployment) {
-  generateExamplesProcessor.deployments = [
-    debugDeployment,
-    defaultDeployment
-  ];
-
-  generateProtractorTestsProcessor.deployments = [
-    debugDeployment,
-    defaultDeployment
-  ];
-
-  generateProtractorTestsProcessor.basePath = 'build/docs';
 });
