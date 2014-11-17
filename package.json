@@ -28,6 +28,7 @@
     "dgeni-packages": "^0.10.5",
     "gulp": "^3.8.10",
     "jshint-stylish": "^1.0.0",
+    "lodash": "^2.4.1",
     "run-sequence": "^1.0.1"
   }
 }
