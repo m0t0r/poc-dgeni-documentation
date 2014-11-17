@@ -26,6 +26,11 @@ gulp.task('clean', function(done) {
   del(['./build'], done);
 });
 
+gulp.task('docs-app', ['bower'], function() {
+  return gulp.src('docs/app/**/*')
+    .pipe(gulp.dest('build/docs/app'));
+});
+
 gulp.task('assets', ['bower'], function() {
   return gulp.src('vendor/**/*')
     .pipe(gulp.dest('build/docs/lib'));
@@ -40,5 +45,5 @@ gulp.task('dgeni', ['jshint'], function() {
 });
 
 gulp.task('default', ['jshint'], function(cb) {
-  runSequence('clean', ['dgeni', 'assets'], cb);
+  runSequence('clean', ['dgeni', 'assets', 'docs-app'], cb);
 });

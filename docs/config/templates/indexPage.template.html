@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="docsApp">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Index page</title>
+    <title>UI Demos</title>
+    <link rel="stylesheet" href="lib/semantic-ui/build/packaged/css/semantic.css"/>
 </head>
 <body>
 
+<div class="ui page grid">
+    <div class="menu ui">
+        <h1 class="header item">Angular-Semantic</h1>
+        <a class="item active" href="#"><i class="lab icon"></i>API Documentation</a>
+        <span class="right menu">
+            <div class="item">v. 0.0.0</div>
+        </span>
+    </div>
+    <div class="ui grid">
+        <div class="four wide column">
+            <div class="ui vertical menu">
+                <div class="header item">
+                    <i class="user icon"></i>
+                    Communities
+                </div>
+                <div class="item">
+                    College
+                    <div class="menu">
+                        <a class="item">Baseball</a>
+                        <a class="item">Basketball</a>
+                        <a class="item">Golf</a>
+                    </div>
+                </div>
+                <a class="item">
+                    Dance
+                </a>
+                <a class="item">
+                    Aerobics
+                </a>
+                <div class="header item">
+                    <i class="globe icon"></i>
+                    Cities
+                </div>
+                <a class="item">
+                    New York
+                </a>
+                <a class="item">
+                    Montreal
+                </a>
+                <a class="item">
+                    Los Angeles
+                </a>
+                <a class="item">
+                    San Francisco
+                </a>
+            </div>
+        </div>
+        <div class="twelve wide column">
+            <div class="ui segment" ng-include="'partials/api.html'">
+
+            </div>
+        </div>
+
+        <div class="sixteen wide column">
+            <div class="ui right aligned segment">Built by <span><a href="https://github.com/angular/dgeni">Dgeni</a></span> - Open Source &copy;2014</div>
+        </div>
+    </div>
+</div>
+<script src="lib/angular/angular.js"></script>
+<script src="app/src/module.js"></script>
 </body>
 </html>
