@@ -3,4 +3,5 @@ poc-dgeni-documentation
 
 POC how to create a basic set up for documentation generation by Dgeni.
 
-[![Dependencies Status](https://david-dm.org/Semantic-Org/Semantic-UI-Angular.png)](https://david-dm.org/Semantic-Org/Semantic-UI-Angular)
+[![Dependency Status](https://david-dm.org/Semantic-Org/Semantic-UI-Angular.svg)](https://david-dm.org/Semantic-Org/Semantic-UI-Angular)
+[![devDependency Status](https://david-dm.org/Semantic-Org/Semantic-UI-Angular/dev-status.svg)](https://david-dm.org/Semantic-Org/Semantic-UI-Angular#info=devDependencies)
