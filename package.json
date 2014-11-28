@@ -27,6 +27,7 @@
     "dgeni": "^0.4.1",
     "dgeni-packages": "^0.10.5",
     "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
     "jshint-stylish": "^1.0.0",
     "lodash": "^2.4.1",
     "run-sequence": "^1.0.1"
